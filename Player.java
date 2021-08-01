@@ -10,7 +10,7 @@ public class Player {
 	String name;
 	
 	
-	Player(int score, String name) {
+	public Player(int score, String name) {
 		this.score = score;
 		this.name = name;
 	}
@@ -28,13 +28,13 @@ public class Player {
 	}
 	
 	
-	Card flip(Deck deck, Player player) {
+	public Card flip(Deck deck, Player player) {
 		Card playerCard = player.draw(deck);
 		return playerCard;
 	}
 	
 	
-	Card draw(Deck deck) {
+	public Card draw(Deck deck) {
 		Card drawnCard = deck.drawTopCard();
 		hand.add(drawnCard);
 		return drawnCard;
